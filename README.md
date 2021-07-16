@@ -17,11 +17,15 @@ The branch manager should be able to perform the following:
 Following are the steps to create data, so other opearaions can be tested through Postman or any other tool
 
 1. Create Address booking using **updateAddressBook** or **updateAddressBooks**
+
    Context: /AddressBook/updateAddressBook
+   
    Context: /AddressBook/updateAddressBooks
 
 2. Create Contacts under the address book using **updateContact** or **updateContacts**
+
    Context: /Contact/updateContact
+   
    Context: /Contact/updateContacts
    
 Or 
