@@ -95,6 +95,7 @@ Response Sample
 The operation will return information about the Address Books, such as Address Book Id, name, and description.
 
 Response Sample - When data is there in the system
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -115,6 +116,7 @@ Response Sample - When data is there in the system
 }
 
 Response Sample - When data is not there in the system
+
 {
    "errorNo":1,
    "errorMessage":"Address Book does not exist",
@@ -124,9 +126,11 @@ Response Sample - When data is not there in the system
 }
 
 **deleteAddressBook**
+
 The operation deletes the address book for the address book id passed in the request as a URL parameter, i.e., addressBookId. It will also delete all the contacts that belong to the deleted address book.
 
 Response Sample - When data is there in the system
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -142,6 +146,7 @@ Response Sample - When data is there in the system
 }
 
 Response Sample - When user tried to delete address book which does not exist
+
 {
    "errorNo":1,
    "errorMessage":"Address Book with 200 does no exist",
@@ -151,9 +156,11 @@ Response Sample - When user tried to delete address book which does not exist
 }
 
 **getAddressBookContacts**
+
 The operation returns the contacts in an Address Book for the addressBookId passed in the request as a URL parameter. If the address book does not exist, the response will comprise an error message.
 
 Response Sample 
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -207,9 +214,11 @@ Response Sample
 }
 
 **getAddressBookById**
+
 The operation returns Address Book Information such as "Address Book Name" and "Address Book Description" for addressBookId passed in the request. If addressBookId is invalid, the response will comprise an error message.
 
 Response Sample - When Address Book exists
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -225,6 +234,7 @@ Response Sample - When Address Book exists
 }
 
 Response Sample - When Address Book does not exists
+
 {
    "errorNo":1,
    "errorMessage":"Address Book with id 100 does no exist",
@@ -234,9 +244,11 @@ Response Sample - When Address Book does not exists
 }
  
 **printAddressBook**
+
 The operation returns all the contacts in the address book for the addressBookId passed in the request as a URL parameter.
 
 Response Sample 
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -291,9 +303,11 @@ Response Sample
 
 
 **updateContact**
+
 The operation will accept Contact information as request. It is used for both add/update operations on Contact. It will perform an update if Contact Id is part of the request; otherwise, carry out insert.
 
 Request Sample
+
 {
     "customerName": "Peter Martin",
     "phone": {
@@ -306,6 +320,7 @@ Request Sample
 }
 
 Response Sample
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -328,11 +343,13 @@ Response Sample
 }
 
 **updateContacts** 
+
 This operation is similar to updateAddressBook but can accept multiple Address Books in a request. Like its sibling, it will update if an Address Book Id is part of the request; otherwise, carry out insert.
 
 As per the below sample, it will updates the first two and insert the third one.
 
 Request Sample
+
  [
       {
          "contactName":"John Dere",
@@ -405,6 +422,7 @@ Request Sample
    ]
    
 Request Sample
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -489,9 +507,11 @@ Request Sample
 }
 
 **getAllContacts**
+
 The operation will return information about the contacts from all the Address Books, such as Address Book Id, Contact Name, and Phone Numbers..
 
 Response Sample - When data is there in the system
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -576,6 +596,7 @@ Response Sample - When data is there in the system
 }
 
 Response Sample - When data is not there in the system
+
 {
    "errorNo":1,
    "errorMessage":"There is no contacts in any of the address book",
@@ -585,9 +606,11 @@ Response Sample - When data is not there in the system
 }
 
 **deleteContact**
+
 The operation deletes the contact from the address book, as per the contact Id passed in the request as a URL parameter, i.e., contactId
 
 Response Sample - When data is there in the system
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -603,6 +626,7 @@ Response Sample - When data is there in the system
 }
 
 Response Sample - When the user tried to delete address book which does not exist
+
 {
    "errorNo":1,
    "errorMessage":"Address Book with 200 does no exist",
@@ -613,9 +637,11 @@ Response Sample - When the user tried to delete address book which does not exis
 
 
 **getContactById**
+
 The operation returns Contact Information such as "Contact Name" and "Phone Number" for contactId passed in the request. If contactId is invalid, the response will comprise an error message.
 
 Response Sample - When Contact Id exists
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -639,6 +665,7 @@ Response Sample - When Contact Id exists
 }
 
 Response Sample - When Contact Id does not exists
+
 {
    "errorNo":1,
    "errorMessage":"Contact with id 500 does no exist",
@@ -649,9 +676,11 @@ Response Sample - When Contact Id does not exists
  
 
 **printUniqueContacts**
+
 The operation returns the unique contacts across the Address Books; e.g., If John Dere is part of multiple address books with duplicate phone numbers, it will be returned once in the payload. Address Book Id should be ignored if it is used for any processing when getting unique contacts.
 
 Response Sample 
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -706,9 +735,11 @@ Response Sample
 
 
 **getAddressBookContacts**
+
 The operation returns the contacts in an Address Book for the addressBookId passed in the request as a URL parameter. If the address book does not exist, the response will comprise an error message.
 
 Response Sample 
+
 {
    "errorNo":0,
    "errorMessage":"",
