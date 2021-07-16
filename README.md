@@ -14,7 +14,7 @@ The branch manager should be able to perform the following:
 - Print address book.
 - Print unique contacts across the address books.
 
-Following are the steps to create data,so it can be tested though Postman or any other tool
+Following are the steps to create data, so other opearaions can be tested through Postman or any other tool
 
 1. Create Address booking using **updateAddressBook** or **updateAddressBooks**
    Context: /AddressBook/updateAddressBook
@@ -23,10 +23,11 @@ Following are the steps to create data,so it can be tested though Postman or any
 2. Create Contacts under the address book using **updateContact** or **updateContacts**
    Context: /Contact/updateContact
    Context: /Contact/updateContacts
-
    
+Or 
 
-
+It can be tested by running the @SpringBootTest class **com.reece.addressbook.AddressBookApplicationTests**. This class will create data before running the test cases.
+   
 
 **updateAddressBook**
 
@@ -342,7 +343,7 @@ Response Sample
 
 The operation will accept Contact information as request. It is used for both add/update operations on Contact. It will perform an update if Contact Id is part of the request; otherwise, carry out insert.
 
-printAddressBook
+Context : /Contact/updateContact
 
 Request Sample
 
@@ -383,6 +384,8 @@ Response Sample
 **updateContacts** 
 
 This operation is similar to updateAddressBook but can accept multiple Address Books in a request. Like its sibling, it will update if an Address Book Id is part of the request; otherwise, carry out insert.
+
+Context : /Contact/updateContacts
 
 As per the below sample, it will updates the first two and insert the third one.
 
@@ -548,6 +551,8 @@ Request Sample
 
 The operation will return information about the contacts from all the Address Books, such as Address Book Id, Contact Name, and Phone Numbers..
 
+Context : /Contact/getAllContacts
+
 Response Sample - When data is there in the system
 
 {
@@ -647,6 +652,10 @@ Response Sample - When data is not there in the system
 
 The operation deletes the contact from the address book, as per the contact Id passed in the request as a URL parameter, i.e., contactId
 
+Context : /Contact/deleteContact
+
+@RequestParam contactId
+
 Response Sample - When data is there in the system
 
 {
@@ -677,6 +686,11 @@ Response Sample - When the user tried to delete address book which does not exis
 **getContactById**
 
 The operation returns Contact Information such as "Contact Name" and "Phone Number" for contactId passed in the request. If contactId is invalid, the response will comprise an error message.
+
+Context : /Contact/deleteContact
+
+@RequestParam contactId
+
 
 Response Sample - When Contact Id exists
 
