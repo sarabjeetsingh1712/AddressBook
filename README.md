@@ -32,6 +32,10 @@ Or
 
 It can be tested by running the @SpringBootTest class **com.reece.addressbook.AddressBookApplicationTests**. This class will create data before running the test cases.
    
+**Operation Exposed**
+
+Below is the list of operation exposed to maintain an Address Book:
+
 
 **updateAddressBook**
 
