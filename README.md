@@ -14,7 +14,8 @@ The branch manager should be able to perform the following:
 - Print address book.
 - Print unique contacts across the address books.
 
-**updateAddressBook** 
+**updateAddressBook**
+
 The operation will accept Address Book information as request. It is used for both add/update operations on an Address Book. It will perform an update if an Address Book Id is part of the request; otherwise, carry out insert. 
 
 Request Sample
