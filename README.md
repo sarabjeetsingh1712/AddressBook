@@ -1,6 +1,6 @@
 **Introduction**
 
-A branch manager would like to maintain address books along with contacts and phone numbers. So they can track the contacts of customers. So there is a need for an application to maintain the above-said need.
+A branch manager would like to maintain address books along with contacts and phone numbers. So they can track the contacts of customers. So there is a need for an application to support the above-said requirement.
 
 The branch manager should be able to perform the following:
 
@@ -14,7 +14,7 @@ The branch manager should be able to perform the following:
 - Print address book.
 - Print unique contacts across the address books.
 
-Following are the steps to create data, so other opearaions can be tested through Postman or any other tool
+Following are the steps to create data so that other operations can be tested through Postman or any other tool
 
 1. Create Address booking using **updateAddressBook** or **updateAddressBooks**
 
@@ -32,9 +32,9 @@ Or
 
 It can be tested by running the @SpringBootTest class **com.reece.addressbook.AddressBookApplicationTests**. This class will create data before running the test cases.
    
-**Operation Exposed**
+**Operations Exposed**
 
-Below is the list of operation exposed to maintain an Address Book:
+Below is the list of operations exposed to maintain an Address Book. Each operation information also provides insight regarding sample requests and responses.
 
 
 **updateAddressBook**
