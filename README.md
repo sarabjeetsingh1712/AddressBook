@@ -26,6 +26,7 @@ Request Sample
  }
 
 Response Sample
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -41,11 +42,13 @@ Response Sample
 }
 
 **updateAddressBooks** 
+
 This operation is similar to updateAddressBook but can accept multiple Address Books in a request. Like its sibling, it will update if an Address Book Id is part of the request; otherwise, carry out insert.
 
 As per the below sample, it will updates the first two and insert the third one.
 
 Request Sample
+
 [
       {
          "id":145,
@@ -64,6 +67,7 @@ Request Sample
    ]
    
 Response Sample
+
 {
    "errorNo":0,
    "errorMessage":"",
@@ -87,6 +91,7 @@ Response Sample
    ]
    
 **getAllAddressBooks**
+
 The operation will return information about the Address Books, such as Address Book Id, name, and description.
 
 Response Sample - When data is there in the system
