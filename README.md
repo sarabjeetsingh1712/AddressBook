@@ -14,6 +14,8 @@ The branch manager should be able to perform the following:
 - Print address book.
 - Print unique contacts across the address books.
 
+Once application is depolyed and stared, API infommation can be accessed thourgh **http://localhost:8080/swagger-ui.html#/**. This URL will also provide information about request and response for each exposed operation. User can try any of the operation using the said URL of swagger.
+
 Following are the steps to create data so that other operations can be tested through Postman or any other tool
 
 1. Create Address booking using **updateAddressBook** or **updateAddressBooks**
