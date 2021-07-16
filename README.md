@@ -758,4 +758,4 @@ Response Sample
 
 Steps to execute the project
 
-Excute run.sh, to create and deploy the project
+Execute run.sh, to create and deploy the project
