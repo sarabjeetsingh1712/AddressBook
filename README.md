@@ -1,5 +1,9 @@
 **Installation and Usage**
 
+Get Docker Image from docker hub using the following command "**docker pull sarabjeetsingh1712/image:addressbookapp1.0**"
+
+or 
+
 Execute run.sh, to create and deploy the project
 
 Once the application is deployed and stared, API information is accessible through **http://localhost:8080/swagger-ui.html#/**. This URL will also provide information about requests and responses for each exposed operation. Users can try any of the processes using the said URL of the swagger.
