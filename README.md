@@ -8,17 +8,33 @@ Following are the steps to create data through Postman or any other tool. It is 
 
 1. Create Address booking using **updateAddressBook** or **updateAddressBooks**
 
-   Context: /AddressBook/updateAddressBook
+   updateAddressBook context: /AddressBook/updateAddressBook
    
-   Context: /AddressBook/updateAddressBooks
+   updateAddressBooks ontext: /AddressBook/updateAddressBooks
 
 2. Create Contacts under the address book using **updateContact** or **updateContacts**
 
-   Context: /Contact/updateContact
+   updateContact context: /Contact/updateContact
    
-   Context: /Contact/updateContacts
+   updateContacts ontext: /Contact/updateContacts
+   
+Note : Information about request/respose is available at the following location : https://github.com/sarabjeetsingh1712/AddressBook/wiki
    
 Or 
 
 It can be tested by running the @SpringBootTest class **com.reece.addressbook.AddressBookApplicationTests**. This class will create data before running the test cases.
+
+Below is th information about application and contoroller classes:
+
+**AddressBookApplication** : Main Application class, that will is used to run a {@link SpringApplication} from the specified source using default settings.
+
+**AddressBookController** : This API exposes operations to manage an Address Book. It enables the service consumer to perform CRUD on an address book.
+
+Context : /AddressBook
+
+**ContactController** : This API exposes operations to manage contacts within an Address Book. It enables the service consumer to perform CRUD on Contact.
+
+Contact : /Contact
+
+
    
