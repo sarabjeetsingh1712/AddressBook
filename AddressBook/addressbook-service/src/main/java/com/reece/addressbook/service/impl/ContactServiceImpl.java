@@ -5,7 +5,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,6 +15,12 @@ import com.reece.addressbook.entities.Contact;
 import com.reece.addressbook.entities.Response;
 import com.reece.addressbook.repository.ContactRepository;
 
+/**
+ * Implementation Class for ContactService. It will interact with repositories for
+ *  CRUD operations
+ * 
+ * @author Sarabjeet
+ */
 @Component
 public class ContactServiceImpl
 {
@@ -23,6 +28,11 @@ public class ContactServiceImpl
 	@Autowired
 	private ContactRepository contactRepository;
 
+	/**
+	 * The method will return all the contacts available in the system.
+	 * 
+	 * @return
+	 */
 	public Response getAllContacts() 
 	{
 		List<Contact> lstContacts = contactRepository.getAllContacts();
@@ -52,6 +62,12 @@ public class ContactServiceImpl
 
 	}
 
+	/**
+	 * The method will be used to update/insert multiple contacts in single call. 
+	 * 
+	 * @param contacts
+	 * @return
+	 */
 	public Response addOrUpdateContacts(List<Contact> contacts) 
 	{
 		Optional<Contact> optContactsWithoutAddressIds = contacts.stream().filter(p -> p.getAddressBookId()==null).findAny();		
@@ -77,6 +93,12 @@ public class ContactServiceImpl
 
 	}
 
+	/**
+	 *  The method will be used to update/insert a contact in single call.
+	 *  
+	 * @param contact
+	 * @return
+	 */
 	public Response addOrUpdateContact(Contact contact) 
 	{
 		contactRepository.addOrUpdateContact(contact);
@@ -98,6 +120,12 @@ public class ContactServiceImpl
 		return ResponseUtil.createResponse(0, "", "", null, lstContact);
 	}
 
+	/**
+	 * The method will delete contact for passed contact id 
+	 * 
+	 * @param id
+	 * @return
+	 */
 	public Response deleteContact(Integer id)
 	{
 		Optional<Contact> optContactToBeDeleted = contactRepository.getContactById
@@ -138,6 +166,12 @@ public class ContactServiceImpl
 
 	}
 
+	/**
+	 * The method will return contact for the passed contact Id
+	 * 
+	 * @param contactId
+	 * @return
+	 */
 	public Response getContactById(Integer contactId) 
 	{
 
@@ -175,6 +209,11 @@ public class ContactServiceImpl
 	}
 
 
+	/**
+	 * The method will return unique contacts across the address books
+	 * 
+	 * @return
+	 */
 	public Response printUniqueContacts() 
 	{ 
 		Set<Contact> setContacts = new HashSet<>();  
