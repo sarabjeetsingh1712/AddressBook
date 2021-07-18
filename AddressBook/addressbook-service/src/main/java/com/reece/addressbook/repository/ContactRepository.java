@@ -8,6 +8,15 @@ import org.springframework.stereotype.Repository;
 
 import com.reece.addressbook.entities.Contact;
 
+/**
+ * Repository class with methods for CRUD operations to be performed on Contact within an
+ * AddressBook
+ * 
+ * It will use ContactBaseRepository to use JPA
+ * 
+ * @author Sarabjeet
+ *
+ */
 @Repository
 public class ContactRepository 
 {
