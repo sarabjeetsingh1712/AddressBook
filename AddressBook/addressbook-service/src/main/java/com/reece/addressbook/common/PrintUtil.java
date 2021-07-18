@@ -10,6 +10,12 @@ import com.reece.addressbook.entities.AddressBook;
 import com.reece.addressbook.entities.Contact;
 import com.reece.addressbook.entities.Phone;
 
+/**
+ * Utility class to print address book on the console or logs file.
+ * 
+ * @author Sarabjeet
+ *
+ */
 public class PrintUtil 
 {
 	private final static Log logger = LogFactory.getLog(PrintUtil.class);
