@@ -9,6 +9,13 @@ import com.reece.addressbook.entities.AddressBook;
 import com.reece.addressbook.entities.Response;
 import com.reece.addressbook.service.impl.AddressBookServiceImpl;
 
+
+/**
+ * Service class for AddressBookController. It will simply delegate request to IMPL class
+ * 
+ * @author Sarabjeet
+ *
+ */
 @Service
 public class AddressBookService 
 {
