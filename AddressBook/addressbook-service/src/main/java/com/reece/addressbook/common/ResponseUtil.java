@@ -6,9 +6,24 @@ import com.reece.addressbook.entities.AddressBook;
 import com.reece.addressbook.entities.Contact;
 import com.reece.addressbook.entities.Response;
 
+/**
+ * Utility class for creating a response, that will sent to service caller over the wire.
+ * 
+ * @author Sarabjeet
+ *
+ */
 public class ResponseUtil 
 {
-	
+	/**
+	 * Method for creating a response, it is used by service impl class
+	 * 
+	 * @param errorNo
+	 * @param errorMessage
+	 * @param successMessage
+	 * @param lstAddressBook
+	 * @param listContact
+	 * @return
+	 */
 	public static Response createResponse
 	(
 			Integer errorNo,
