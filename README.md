@@ -12,15 +12,15 @@ Following are the steps to create data through Postman or any other tool. It is 
 
 1. Create Address booking using **updateAddressBook** or **updateAddressBooks**
 
-   updateAddressBook context: /AddressBook/updateAddressBook
+   **updateAddressBook** context: /AddressBook/updateAddressBook
    
-   updateAddressBooks ontext: /AddressBook/updateAddressBooks
+   **updateAddressBooks** ontext: /AddressBook/updateAddressBooks
 
 2. Create Contacts under the address book using **updateContact** or **updateContacts**
 
-   updateContact context: /Contact/updateContact
+   **updateContact** context: /Contact/updateContact
    
-   updateContacts ontext: /Contact/updateContacts
+   **updateContacts** ontext: /Contact/updateContacts
    
 Note : Information about request/respose is available at the following location : https://github.com/sarabjeetsingh1712/AddressBook/wiki
 
