@@ -1,0 +1,378 @@
+{
+	"id": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+	"name": "AddressBook",
+	"description": "",
+	"order": [
+		"c0b974fb-a122-61c4-359b-f7dc6abc76c5",
+		"668f6b50-b6e4-2624-5de6-9bee808e2024",
+		"0c2ad7e7-43d7-1b4c-b3f5-5ea2bd456879",
+		"6f021922-2e4f-de2a-3f03-d0222346dfe0",
+		"46b82421-7144-23bf-2ed5-8df4d345ea9c",
+		"01315178-5978-5975-e523-4356e958ad0f",
+		"8227aa61-c9b0-1339-ebbf-e17c8014200e",
+		"17f39bed-3484-b78e-614c-a00cf3dd1c4a",
+		"7640a4c0-a968-3751-64ce-e8551271aeb6",
+		"ae38f2bd-99ef-2272-0ba3-86ad5d8602d8",
+		"3c042656-5fff-cf13-487f-68a1f28cc858",
+		"4d7bcc0b-72ad-0688-c9be-1208e23bf4b9"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1625912447163,
+	"owner": "1875728",
+	"public": false,
+	"requests": [
+		{
+			"id": "01315178-5978-5975-e523-4356e958ad0f",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/AddressBook/getAddressBookById?addressBookId={{addressBookId}}",
+			"queryParams": [
+				{
+					"key": "addressBookId",
+					"value": "{{addressBookId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1626498884925,
+			"name": "getAddressBookById",
+			"description": "",
+			"collectionId": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+			"responses": []
+		},
+		{
+			"id": "0c2ad7e7-43d7-1b4c-b3f5-5ea2bd456879",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/Contact/updateContact",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "var jsonData = JSON.parse(responseBody);\n\nvar contact = jsonData.contact[0];\n\ncontactId = contact.id;\n\npostman.setEnvironmentVariable(\"contactId\", contactId);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1626577627865,
+			"name": "updateContact",
+			"description": "",
+			"collectionId": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+			"responses": [],
+			"rawModeData": "{\n    \"contactName\": \"Micheal Hill\",\n    \"addressBookId\" : \"{{addressBookId}}\",\n    \"phone\": {\n         \"phoneNumber\": [\n            \"0453223333\"\n        ]\n    }\n    \n}"
+		},
+		{
+			"id": "17f39bed-3484-b78e-614c-a00cf3dd1c4a",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/AddressBook/getAddressBookContacts?addressBookId={{addressBookId}}",
+			"queryParams": [
+				{
+					"key": "addressBookId",
+					"value": "{{addressBookId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1626576255403,
+			"name": "getAddressBookContacts",
+			"description": "",
+			"collectionId": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+			"responses": []
+		},
+		{
+			"id": "3c042656-5fff-cf13-487f-68a1f28cc858",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/AddressBook/deleteAddressBook?addressBookId={{addressBookId}}",
+			"queryParams": [
+				{
+					"key": "addressBookId",
+					"value": "{{addressBookId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1626578678464,
+			"name": "deleteAddressBook",
+			"description": "",
+			"collectionId": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "46b82421-7144-23bf-2ed5-8df4d345ea9c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/AddressBook/getAllAddressBooks",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1626136451865,
+			"name": "getAllAddressBooks",
+			"description": "",
+			"collectionId": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+			"responses": []
+		},
+		{
+			"id": "4d7bcc0b-72ad-0688-c9be-1208e23bf4b9",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/Contact/deleteContact?contactId={{contactId}}",
+			"queryParams": [
+				{
+					"key": "contactId",
+					"value": "{{contactId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1626577607262,
+			"name": "deleteContact",
+			"description": "",
+			"collectionId": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "668f6b50-b6e4-2624-5de6-9bee808e2024",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/AddressBook/updateAddressBooks",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "var jsonData = JSON.parse(responseBody);\n\nvar firstAddress = jsonData.addressBook[0];\n\nvar secondAddress = jsonData.addressBook[1];\n\naddressBookId = firstAddress.id;\n\nsecondAddressBookId = secondAddress.id;\n\npostman.setEnvironmentVariable(\"addressBookId\", addressBookId);\n\npostman.setEnvironmentVariable(\"secondAddressBookId\", secondAddressBookId);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1626578004429,
+			"name": "updateAddressBooks",
+			"description": "",
+			"collectionId": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+			"responses": [],
+			"rawModeData": "[ {\r\n            \"addressBookName\": \"CustomerContactBooks\",\r\n            \"addressBookDesc\": \"Holds contact information of Customers\"\r\n        },\r\n        {\r\n\t            \"addressBookName\": \"DepartmentContactBooks\",\r\n\t            \"addressBookDesc\": \"Holds contact information of departments\"\r\n        },\r\n        {\r\n        \t\"id\" : {{addressBookId}},\r\n        \t\"addressBookName\": \"EmployeeContactBooks\",\r\n\t            \"addressBookDesc\": \"Holds contact information of Employees\"\r\n        }\r\n  ]"
+		},
+		{
+			"id": "6f021922-2e4f-de2a-3f03-d0222346dfe0",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/Contact/updateContacts",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "var jsonData = JSON.parse(responseBody);\n\nvar contact = jsonData.contact[0];\n\ncontactId = contact.id;\n\npostman.setEnvironmentVariable(\"contactId\", contactId);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1626578349041,
+			"name": "updateContacts",
+			"description": "",
+			"collectionId": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+			"responses": [],
+			"rawModeData": "[\n  {\n    \"contactName\": \"John Dere\",\n    \"phone\": {\n       \"phoneNumber\": [\n        \"0424681722\",\n        \"0423681722\"\n      ],\n      \"contact\": null\n    },\n    \"addressBookId\": {{addressBookId}}\n  },\n  {\n    \"contactName\": \"Michael Francis\",\n    \"phone\": {\n       \"phoneNumber\": [\n        \"0424683232\"\n      ],\n      \"contact\": null\n    },\n    \"addressBookId\": {{addressBookId}}\n  },\n  {\n    \"contactName\": \"John Dere\",\n    \"phone\": {\n       \"phoneNumber\": [\n        \"0424681722\",\n        \"0423681722\"\n      ],\n      \"contact\": null\n    },\n    \"addressBookId\": {{secondAddressBookId}}\n  },\n  {\n    \"contactName\": \"Tom Alter\",\n    \"phone\": {\n      \"phoneNumber\": [\n        \"0424231702\"\n      ],\n      \"contact\": null\n    },\n    \"addressBookId\": {{secondAddressBookId}}\n  },\n  {\n    \"contactName\": \"John Halt\",\n    \"phone\": {\n       \"phoneNumber\": [\n        \"0424231701\"\n      ],\n      \"contact\": null\n    },\n    \"addressBookId\": {{secondAddressBookId}}\n  },\n  {\n    \"contactName\": \"John Halt\",\n    \"phone\": {\n      \"phoneNumber\": [\n        \"0424231701\"\n      ],\n      \"contact\": null\n    },\n    \"addressBookId\": {{addressBookId}}\n  }\n]"
+		},
+		{
+			"id": "7640a4c0-a968-3751-64ce-e8551271aeb6",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/AddressBook/printAddressBook?addressBookId={{addressBookId}}",
+			"queryParams": [
+				{
+					"key": "addressBookId",
+					"value": "{{addressBookId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1626577431578,
+			"name": "printAddressBook",
+			"description": "",
+			"collectionId": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+			"responses": []
+		},
+		{
+			"id": "8227aa61-c9b0-1339-ebbf-e17c8014200e",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/Contact/getAllContacts",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1626578478411,
+			"name": "getAllContacts",
+			"description": "",
+			"collectionId": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+			"responses": []
+		},
+		{
+			"id": "ae38f2bd-99ef-2272-0ba3-86ad5d8602d8",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/Contact/printUniqueContacts",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1626252399637,
+			"name": "printUniqueContacts",
+			"description": "",
+			"collectionId": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+			"responses": []
+		},
+		{
+			"id": "c0b974fb-a122-61c4-359b-f7dc6abc76c5",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/AddressBook/updateAddressBook",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "var jsonData = JSON.parse(responseBody);\n\nvar address = jsonData.addressBook[0];\n\naddressBookId = address.id;\n\npostman.setEnvironmentVariable(\"addressBookId\", addressBookId);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1626498800888,
+			"name": "updateAddressBook",
+			"description": "",
+			"collectionId": "ef4c2881-64a2-96c1-8570-66a533a7267e",
+			"responses": [],
+			"rawModeData": " {\n            \"addressBookName\": \"EmpContactBooks\",\n            \"addressBookDesc\": \"Holds contact information of Employees\"\n        }"
+		}
+	]
+}
