@@ -1,6 +1,6 @@
 **Installation and Usage**
 
-Get Docker Image from docker hub using the following command "**docker pull sarabjeetsingh1712/image:addressbookapp1.0**"
+Get Docker Image from docker hub using the following command "**docker pull sarabjeetsingh1712/image:addressbookapp1.1**"
 
 or 
 
