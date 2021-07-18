@@ -24,7 +24,7 @@ Following are the steps to create data through Postman or any other tool. It is 
    
 Note : Information about request/respose is available at the following location : https://github.com/sarabjeetsingh1712/AddressBook/wiki
 
-Postman Collection can be downloaded from the following location https://github.com/sarabjeetsingh1712/AddressBook. The file name is AddressBook.postman_collection.json
+Postman Collection can be downloaded from the following location https://github.com/sarabjeetsingh1712/AddressBook. The file name is "**AddressBook.postman_collection.json**"
    
 Or 
 
