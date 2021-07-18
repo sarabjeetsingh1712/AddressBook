@@ -8,6 +8,13 @@ import org.springframework.stereotype.Repository;
 
 import com.reece.addressbook.entities.AddressBook;
 
+/**
+ * Repository class with methods for CRUD operations to be performed on an AddressBook
+ * It will use AddressBookBaseRepository to use JPA
+ * 
+ * @author Sarabjeet
+ *
+ */
 @Repository
 public class AddressBookRepository 
 {
