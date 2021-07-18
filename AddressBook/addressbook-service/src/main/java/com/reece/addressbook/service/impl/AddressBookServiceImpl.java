@@ -104,7 +104,7 @@ public class AddressBookServiceImpl
 			addressBookRepository.deleteAddressBook(addressBookToBeDeleted.getId());
 
 			//All the contacts within address book will also be deleted
-			if(lstContact!=null && lstContact.isEmpty())
+			if(lstContact!=null && !lstContact.isEmpty())
 			{
 				deleteAllContactsForAddressBook(lstContact);
 			}
