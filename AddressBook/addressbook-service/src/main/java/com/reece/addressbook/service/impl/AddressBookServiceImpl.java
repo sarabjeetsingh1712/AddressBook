@@ -61,6 +61,12 @@ public class AddressBookServiceImpl
 
 	}
 
+	/**
+	 * The method will call will update/insert multiple records in address book
+	 * 
+	 * @param addressBooks
+	 * 
+	 */
 	public Response updateAddressBooks(List<AddressBook> addressBooks) 
 	{
 		addressBookRepository.addOrUpdateAddressBooks(addressBooks);
@@ -77,6 +83,13 @@ public class AddressBookServiceImpl
 						);
 	}
 
+
+	/**
+	 * The method will call will update/insert a record in address book
+	 * 
+	 * @param addressBook
+	 * 
+	 */
 	public Response updateAddressBook(AddressBook addressBook) 
 	{
 		addressBookRepository.addOrUpdateAddressBook(addressBook);
@@ -86,6 +99,12 @@ public class AddressBookServiceImpl
 		return ResponseUtil.createResponse(0, "", "", lstAddressBook, null);
 	}
 
+	/**
+	 * The method call will delete an address book for the given addressBookId .
+	 * 
+	 * @param addressBookId
+	 * @return
+	 */
 	public Response deleteAddressBook(Integer addressBookId)
 	{	
 		Optional<AddressBook> optAddressBookToBeDeleted = addressBookRepository.getAddressBookById
@@ -132,6 +151,12 @@ public class AddressBookServiceImpl
 	}
 
 
+	/**
+	 * The method call will fetch information about an address book for the given addressBookId .
+	 * 
+	 * @param addressBookId
+	 * @return
+	 */
 	public Response getAddressBookById(Integer addressBookId) 
 	{
 
