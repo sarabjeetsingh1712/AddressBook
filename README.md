@@ -44,7 +44,7 @@ Contact : /Contact
 
 
 **Assumptions**
-It is assumed that validation about data such as Name is null , phone no format etc., hence not implemented at service side.
+It is assumed that validation about data such as Name is null , phone no format etc. will be done by service consumer, hence not implemented at service side.
 
 
    
